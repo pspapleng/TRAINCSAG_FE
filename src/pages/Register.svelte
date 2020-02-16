@@ -10,8 +10,8 @@
       err = "plz check username and password";
       return;
     }
-    let res = await fetch("http://localhost:1234/api/user", {
-      method: 'post',
+    let res = await fetch("http://applemalakor.herokuapp.com/api/user", {
+      method: "post",
       body: JSON.stringify({ username, password }),
       headers: {
         "content-type": "application/json"
@@ -48,11 +48,11 @@
 </svelte:head>
 <section class="container">
   <div>
-  <!-- ทำไมค่าไม่เปลี่ยนฟระ : กูจะไปรู้ม้ายยยยยยยย-->
+    <!-- ทำไมค่าไม่เปลี่ยนฟระ : กูจะไปรู้ม้ายยยยยยยย-->
     <input bind:value={username} type="text" placeholder="username" />
   </div>
   <div>
-  <!-- นี่ด้วย : เออดิ -->
+    <!-- นี่ด้วย : เออดิ -->
     <input bind:value={password} type="password" placeholder="password" />
   </div>
   <p style="color:red">{err}</p>
